@@ -5,7 +5,10 @@ _versión wasm y rust_
 
 Este proyecto se creó utilizando el siguiente [template](https://rustwasm.github.io/docs/wasm-pack/tutorials/hybrid-applications-with-webpack/index.html). Viene con la configuración para compilar Rust en WebAssembly y, además, usando Webpack.
 
-Debes tener instalado 
+Debes tener instalado:
+- [wasm-pack](https://rustwasm.github.io/wasm-pack/installer/)
+- [rust](https://www.rust-lang.org/tools/install)
+- npm
 
 
 ## Ejecutar código
