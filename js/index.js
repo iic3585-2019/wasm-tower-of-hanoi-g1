@@ -6,9 +6,9 @@ import("../crate/pkg").then(module => {
   const timeResultText = document.getElementById("seconds");
   const nDisksText = document.getElementById("n-disks");
 
-  const calculate = async () => {
+  const calculate = () => {
     const number = parseInt(nDisksInput.value);
-    const time = await module.timed_hanoi(number);
+    const time = module.timed_hanoi(number);
     nDisksText.innerText = `${number}`;
     timeResultText.innerText = `${time}`;
   }
