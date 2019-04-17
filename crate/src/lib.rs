@@ -1,4 +1,5 @@
 use wasm_bindgen::prelude::*;
+use js_sys::Date;
 mod hanoi;
 
 // When the `wee_alloc` feature is enabled, use `wee_alloc` as the global
@@ -21,13 +22,14 @@ pub fn run() -> Result<(), JsValue> {
 
     let window = web_sys::window().expect("should have a Window");
     let document = window.document().expect("should have a Document");
-    // let seconds = document.get_element_by_id("seconds").expect("should have #seconds");
+    let seconds = document.get_element_by_id("seconds").expect("should have #seconds");
+    
+    // TODO: refactor
+    let then = Date::now();
+    hanoi::hanoi_recursion(6);   
+    let time_diff = Date::now() - then;
 
-
-    hanoi::hanoi_recursion();
-
-    // seconds.set_text_content(Some(&now.elapsed().as_secs().to_string()));
-
+    seconds.set_text_content(Some(&time_diff.to_string()));
 
     Ok(())
 }
