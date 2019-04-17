@@ -1,34 +1,5 @@
-# 🦀🕸 `rust-webpack-template`
+# Torres de Hanoi
+En este proyecto buscamos analizar el tiempo de ejecución del algoritmo para resolver el problema de las torres de hanoi. El objetivo es comparar el rendimiento usando Rust + wasm y en JS normal.
 
-> **Kickstart your Rust, WebAssembly, and Webpack project!**
-
-This template is designed for creating monorepo-style Web applications with
-Rust-generated WebAssembly and Webpack without publishing your wasm to NPM.
-
-[**📚 Read this template tutorial! 📚**][template-docs]
-
-Be sure to check out [other `wasm-pack` tutorials online][tutorials] for other
-templates and usages of `wasm-pack`.
-
-[tutorials]: https://rustwasm.github.io/docs/wasm-pack/tutorials/index.html
-[template-docs]: https://rustwasm.github.io/docs/wasm-pack/tutorials/hybrid-applications-with-webpack/index.html
-
-## 🚴 Using This Template
-
-You can use `npm init` to clone this template:
-
-```sh
-npm init rust-webpack my-app
-```
-
-[Afterwards check out the full documentation for exploring it][template-docs].
-
-## 🔋 Batteries Included
-
-This template comes pre-configured with all the boilerplate for compiling Rust
-to WebAssembly and hooking into a Webpack build pipeline.
-
-* `npm run start` -- Serve the project locally for development at
-  `http://localhost:8080`.
-
-* `npm run build` -- Bundle the project (in production mode).
+## Algoritmo
+El algoritmo tiene complejidad de O(2^n), siendo n el número de discos. El programa empieza a notar una diferencia significativa a partir de los 15 discos y ya aproximadamente en los 28 se empieza a demorar 5 segundos. Después cada vez que se aumenta un disco, se duplica el tiempo de ejecución del algoritmo.
