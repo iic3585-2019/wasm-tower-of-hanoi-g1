@@ -17,10 +17,10 @@
     "webpack-cli": "^3.3.0",
     "webpack-dev-server": "^3.2.1"
   },
-  "name": "rxjs-nervioso-g1",
+  "name": "js-version-hanoi-g1",
   "version": "1.0.0",
   "main": "src/index.js",
-  "repository": "git@github.com:iic3585-2019/rxjs-nervioso-g1.git",
+  "repository": "git@github.com:iic3585-2019/wasm-tower-of-hanoi-g1.git",
   "author": "group1",
   "license": "MIT",
   "dependencies": {

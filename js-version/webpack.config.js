@@ -29,12 +29,12 @@ module.exports = {
   devtool: 'inline-source-map',
   output: {
     path: path.resolve(__dirname, 'build'),
-    publicPath: 'http://localhost:8080/',
+    publicPath: 'http://localhost:8081/',
   },
   devServer: {
     contentBase: path.join(__dirname, 'src', 'static'),
-    port: 8080,
-    headers: {'Access-Control-Allow-Origin': 'http://localhost:8080'},
+    port: 8081,
+    headers: {'Access-Control-Allow-Origin': 'http://localhost:8081'},
   },
   watch: true,
 };

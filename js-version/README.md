@@ -1,35 +1,31 @@
-# Nervioso
-
-This repo contains the code to run the game 'Nervioso' on your browser.
-This project uses `node` and `yarn`.
+# Torre de Hanoi 
+## js version
+Este proyecto usa `node` y `yarn`.
 
 ## Setup
 
-Clone the repo and install the dependencies using the followinf command:
+Clona el repo e instala las dependencias usando el siguiente comando:
 
 ```
 yarn
 ```
 
-## Run the game
+## Ejecución
 
-To run the game you have to run the following command
+Para correr el programa debes usar:
 ```
 yarn start
 ```
 
-Then visit `localhost:8080` and there you go!
+Luego visita `localhost:8080`.
 
-## Code structure
+## Estructura del código
 
-The main game logic lies in `src/game/index.js`. The idea is that the game class holds the 
-current state of the game and exposes an api to interact with the game. Then observes can 
-subscribe to the game state and listen to its changes.
+El archivo `src/index.js` permite la interacción con la interfaz.
 
-To add functionallity to the game make sure to call the `next` method of the subscriber.
+El algoritmo de resolución del problema lo puedes encontrar en la carpeta `src/hanoi`.
 
-The observers are in the `src/observers` folder. The idea behnd this observers is to listen to both dom events
-and game state changes
+El HTML se encuentra en `stc/static/index.html`.
 
-The HTML index `stc/static/index.html` is inside the static folder since this is the
-folder that is served alongside the webpack bundles.
+## Algoritmo
+El algoritmo tiene complejidad de O(2^n), siendo n el número de discos. El programa empieza a notar una diferencia significativa a partir de los 15 discos y ya aproximadamente en los 28 se empieza a demorar 5 segundos.
