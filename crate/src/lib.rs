@@ -22,17 +22,17 @@ pub fn run() -> Result<(), JsValue> {
 
     let window = web_sys::window().expect("should have a Window");
     let document = window.document().expect("should have a Document");
-    let seconds = document.get_element_by_id("seconds").expect("should have #seconds");
     
-    // TODO: refactor
-    let then = Date::now();
-    hanoi::hanoi_recursion(6);   
-    let time_diff = Date::now() - then;
-
-    seconds.set_text_content(Some(&time_diff.to_string()));
-
     Ok(())
 }
+
+#[wasm_bindgen]
+pub fn timed_hanoi(nDisks: i32) -> f64 {
+    let then = Date::now();
+    hanoi::hanoi_recursion(nDisks);   
+    return Date::now() - then;
+}
+
 
 fn set_panic_hook() {
     // When the `console_error_panic_hook` feature is enabled, we can call the
